@@ -1,0 +1,598 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   Global
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:#fff;
+    overflow-x:hidden;
+    background-image:
+        radial-gradient(circle at top left,#1e3a8a22 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#06b6d422 0%,transparent 35%);
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(5,8,22,.55);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    transition:
+        background .4s ease,
+        box-shadow .4s ease,
+        padding .4s ease;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav.scrolled{
+    background:#050816;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#38bdf8;
+    letter-spacing:2px;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:35px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+    position:relative;
+    transition:color .35s ease;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:#38bdf8;
+    transition:width .35s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+.nav-links a.active{
+    color:#38bdf8;
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:120px 8%;
+}
+
+section h1{
+    font-size:60px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+section p{
+    font-size:20px;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+/* ===========================
+   Home
+=========================== */
+
+.home-content{
+    max-width:900px;
+}
+
+.home-content h1{
+    font-size:70px;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.home-content p{
+    margin-bottom:40px;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    background:#38bdf8;
+    color:#050816;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease,
+        color .35s ease;
+    box-shadow:0 10px 30px rgba(56,189,248,.35);
+}
+
+.btn:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 20px 45px rgba(56,189,248,.45);
+}
+
+/* ===========================
+   Services
+=========================== */
+
+.service-container{
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+
+    padding:35px 30px;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease,
+        background .45s ease;
+
+    will-change:transform;
+}
+.card{
+    cursor:pointer;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    background:linear-gradient(
+        135deg,
+        rgba(56,189,248,.10),
+        transparent,
+        rgba(56,189,248,.05)
+    );
+    opacity:0;
+    transition:opacity .4s ease;
+    pointer-events:none;
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+    transition:.35s ease;
+}
+
+.card p{
+    font-size:16px;
+    color:#d1d5db;
+    transition:.35s ease;
+}
+
+.card:hover{
+    transform:translateY(-18px) scale(1.04);
+    background:rgba(56,189,248,.08);
+    border-color:#38bdf8;
+    box-shadow:0 25px 50px rgba(56,189,248,.35);
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover h2{
+    color:#ffffff;
+    transform:translateY(-3px);
+}
+
+.card:hover p{
+    color:#ffffff;
+}
+/* ===========================
+   Contact Section
+=========================== */
+
+#contact{
+    background:#08111f;
+    padding:120px 8%;
+}
+
+.contact-container{
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:60px;
+    margin-top:60px;
+    align-items:center;
+}
+
+/* ===========================
+   Contact Info
+=========================== */
+
+.contact-info{
+    text-align:left;
+}
+
+.contact-info h2{
+    font-size:36px;
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.contact-info > p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:15px;
+
+    padding:20px;
+    margin-bottom:20px;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.info-box:hover{
+    transform:translateX(12px);
+    background:rgba(56,189,248,.08);
+    border-color:#38bdf8;
+    box-shadow:0 12px 30px rgba(56,189,248,.22);
+}
+
+.info-box h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.info-box p{
+    color:#d1d5db;
+}
+
+/* ===========================
+   Contact Form
+=========================== */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px 18px;
+
+    background:#111827;
+    color:#fff;
+
+    border:1px solid transparent;
+    outline:none;
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover{
+    border-color:#38bdf8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#38bdf8;
+    transform:scale(1.02);
+    box-shadow:0 0 18px rgba(56,189,248,.3);
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* ===========================
+   Success Message
+=========================== */
+
+#successMessage{
+    margin-top:20px;
+    text-align:center;
+    color:#22c55e;
+    font-size:17px;
+    font-weight:600;
+    opacity:0;
+    transition:opacity .4s ease;
+}
+
+#successMessage.show{
+    opacity:1;
+}
+
+/* ===========================
+   Hero Badge
+=========================== */
+
+.tag{
+    display:inline-block;
+    padding:10px 20px;
+    margin-bottom:25px;
+
+    border-radius:50px;
+
+    background:rgba(56,189,248,.12);
+    border:1px solid rgba(56,189,248,.3);
+
+    color:#38bdf8;
+    font-size:15px;
+    font-weight:500;
+}
+
+.home-content h1 span{
+    color:#38bdf8;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#030712;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ===========================
+   Hamburger
+=========================== */
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:28px;
+    height:3px;
+    margin:4px 0;
+    background:#fff;
+    transition:.3s;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info{
+        text-align:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        right:-100%;
+
+        width:240px;
+
+        display:flex;
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:20px 0;
+
+        background:#0f172a;
+        border-radius:12px;
+
+        transition:right .4s ease;
+    }
+
+    .nav-links.active{
+        right:20px;
+    }
+
+    .nav-links li{
+        margin:18px 0;
+    }
+
+    .home-content h1{
+        font-size:42px;
+    }
+
+    section h1{
+        font-size:40px;
+    }
+
+    section p{
+        font-size:18px;
+    }
+
+    .btn{
+        padding:14px 32px;
+    }
+}
+
+/* ===========================
+   Scroll Reveal Animation
+=========================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-80px);
+    transition:all .8s ease;
+}
+
+.fade-left.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.fade-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition:all .8s ease;
+}
+
+.fade-right.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.zoom-in{
+    opacity:0;
+    transform:translateY(40px) scale(.9);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.zoom-in.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+/* ===========================
+   Card Animation Delay
+=========================== */
+
+.card:nth-child(1){transition-delay:.10s;}
+.card:nth-child(2){transition-delay:.25s;}
+.card:nth-child(3){transition-delay:.40s;}
+.card:nth-child(4){transition-delay:.55s;}

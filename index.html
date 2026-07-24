@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillCraft Technology | Responsive Landing Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav id="navbar">
+
+    <div class="logo">SkillCraft</div>
+
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+    <div class="home-content hidden">
+
+        <span class="tag">🚀 Internship & Career Development Platform</span>
+
+        <h1>
+            Learn.
+            Build.
+            <span>Get Hired.</span>
+        </h1>
+
+        <p>
+            SkillCraft Technology helps students master modern technologies,
+            build industry-level projects, and secure internships through
+            hands-on practical learning and expert mentorship.
+        </p>
+
+        <a href="#services" class="btn">
+            Explore Programs
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <h1 class="hidden">Courses & Internships</h1>
+
+    <div class="service-container">
+<div class="card zoom-in" data-course="Web Development">
+    <h2>🌐 Web Development</h2>
+    <p>
+        Learn HTML, CSS, JavaScript, React, Bootstrap,
+        responsive design, APIs, and deploy real projects.
+    </p>
+</div>
+
+<div class="card zoom-in" data-course="Python Programming">
+    <h2>🐍 Python Programming</h2>
+    <p>
+        Master Python fundamentals, automation,
+        Flask, Django, APIs, and backend development.
+    </p>
+</div>
+
+<div class="card zoom-in" data-course="Cyber Security">
+    <h2>🔐 Cyber Security</h2>
+    <p>
+        Learn Ethical Hacking, Network Security,
+        Linux, Kali, Burp Suite and Penetration Testing.
+    </p>
+</div>
+
+<div class="card zoom-in" data-course="Internship Program">
+    <h2>💼 Internship Program</h2>
+    <p>
+        Work on live company projects,
+        receive mentorship, internship certificates,
+        and industry exposure.
+    </p>
+    </div>
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <h1 class="hidden">Apply For Course</h1>
+
+    <div class="contact-container">
+
+        <div class="contact-info fade-left">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                We'd love to hear from you. Whether you're interested
+                in our internship programs, professional courses,
+                or have any questions, feel free to reach out.
+            </p>
+
+            <div class="info-box">
+                <h3>📍 Address</h3>
+                <p>Kolkata, West Bengal, India</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📞 Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📧 Email</h3>
+                <p>support@skillcraft.com</p>
+            </div>
+
+        </div>
+
+        <form class="contact-form fade-right" id="contactForm">
+
+            <input
+                type="text"
+                id="fullname"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Write your message..."
+                required
+            ></textarea>
+
+            <button type="submit" class="btn">
+                Apply Now
+            </button>
+
+            <p id="successMessage"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 SkillCraft Technology. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
