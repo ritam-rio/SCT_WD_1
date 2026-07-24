@@ -1,23 +1,11 @@
-// ===============================
-// Select Elements
-// ===============================
-
 const navbar = document.getElementById("navbar");
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links a");
 
-// ===============================
-// Hamburger Menu
-// ===============================
-
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-
-// ===============================
-// Close Mobile Menu
-// ===============================
 
 links.forEach(link => {
 
@@ -29,10 +17,6 @@ links.forEach(link => {
 
 });
 
-// ===============================
-// Navbar Scroll Effect
-// ===============================
-
 window.addEventListener("scroll", () => {
 
     if(window.scrollY > 60){
@@ -43,10 +27,6 @@ window.addEventListener("scroll", () => {
     }
 
 });
-
-// ===============================
-// Smooth Scrolling
-// ===============================
 
 links.forEach(link => {
 
@@ -63,10 +43,6 @@ links.forEach(link => {
     });
 
 });
-
-// ===============================
-// Active Navigation
-// ===============================
 
 const sections = document.querySelectorAll("section");
 
@@ -100,10 +76,6 @@ window.addEventListener("scroll", () => {
 
 });
 
-// ===============================
-// Scroll Reveal Animation
-// ===============================
-
 const observer = new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
@@ -127,10 +99,6 @@ document.querySelectorAll(
     observer.observe(el);
 
 });
-
-// ===============================
-// Button Ripple Effect
-// ===============================
 
 document.querySelectorAll(".btn").forEach(button=>{
 
@@ -159,10 +127,6 @@ document.querySelectorAll(".btn").forEach(button=>{
     });
 
 });
-
-// ===============================
-// Contact Form Validation
-// ===============================
 
 const form=document.getElementById("contactForm");
 const successMessage=document.getElementById("successMessage");
@@ -201,9 +165,6 @@ form.addEventListener("submit",(e)=>{
     },4000);
 
 });
-// ======================================
-// Course Card Click -> Application Form
-// ======================================
 
 const courseCards = document.querySelectorAll(".card");
 const subjectInput = document.getElementById("subject");
