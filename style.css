@@ -1,11 +1,4 @@
-/* ===========================
-   Google Font
-=========================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-/* ===========================
-   Global
-=========================== */
 
 *{
     margin:0;
@@ -23,10 +16,6 @@ body{
         radial-gradient(circle at top left,#1e3a8a22 0%,transparent 35%),
         radial-gradient(circle at bottom right,#06b6d422 0%,transparent 35%);
 }
-
-/* ===========================
-   Navbar
-=========================== */
 
 nav{
     position:fixed;
@@ -53,10 +42,6 @@ nav.scrolled{
     box-shadow:0 10px 40px rgba(0,0,0,.5);
 }
 
-/* ===========================
-   Logo
-=========================== */
-
 .logo{
     font-size:30px;
     font-weight:700;
@@ -65,10 +50,6 @@ nav.scrolled{
     cursor:pointer;
     user-select:none;
 }
-
-/* ===========================
-   Navigation
-=========================== */
 
 .nav-links{
     display:flex;
@@ -112,10 +93,6 @@ nav.scrolled{
     color:#38bdf8;
 }
 
-/* ===========================
-   Sections
-=========================== */
-
 section{
     min-height:100vh;
     display:flex;
@@ -138,10 +115,6 @@ section p{
     line-height:1.8;
 }
 
-/* ===========================
-   Home
-=========================== */
-
 .home-content{
     max-width:900px;
 }
@@ -155,10 +128,6 @@ section p{
 .home-content p{
     margin-bottom:40px;
 }
-
-/* ===========================
-   Button
-=========================== */
 
 .btn{
     display:inline-block;
@@ -180,10 +149,6 @@ section p{
     transform:translateY(-8px) scale(1.03);
     box-shadow:0 20px 45px rgba(56,189,248,.45);
 }
-
-/* ===========================
-   Services
-=========================== */
 
 .service-container{
     width:100%;
@@ -267,9 +232,6 @@ section p{
 .card:hover p{
     color:#ffffff;
 }
-/* ===========================
-   Contact Section
-=========================== */
 
 #contact{
     background:#08111f;
@@ -285,10 +247,6 @@ section p{
     margin-top:60px;
     align-items:center;
 }
-
-/* ===========================
-   Contact Info
-=========================== */
 
 .contact-info{
     text-align:left;
@@ -340,9 +298,6 @@ section p{
     color:#d1d5db;
 }
 
-/* ===========================
-   Contact Form
-=========================== */
 
 .contact-form{
     display:flex;
@@ -400,10 +355,6 @@ section p{
     cursor:pointer;
 }
 
-/* ===========================
-   Success Message
-=========================== */
-
 #successMessage{
     margin-top:20px;
     text-align:center;
@@ -417,10 +368,6 @@ section p{
 #successMessage.show{
     opacity:1;
 }
-
-/* ===========================
-   Hero Badge
-=========================== */
 
 .tag{
     display:inline-block;
@@ -441,10 +388,6 @@ section p{
     color:#38bdf8;
 }
 
-/* ===========================
-   Footer
-=========================== */
-
 footer{
     padding:30px;
     text-align:center;
@@ -452,10 +395,6 @@ footer{
     color:#94a3b8;
     border-top:1px solid rgba(255,255,255,.08);
 }
-
-/* ===========================
-   Hamburger
-=========================== */
 
 .hamburger{
     display:none;
@@ -470,10 +409,6 @@ footer{
     background:#fff;
     transition:.3s;
 }
-
-/* ===========================
-   Responsive
-=========================== */
 
 @media(max-width:900px){
 
@@ -538,10 +473,6 @@ footer{
     }
 }
 
-/* ===========================
-   Scroll Reveal Animation
-=========================== */
-
 .hidden{
     opacity:0;
     transform:translateY(80px);
@@ -587,10 +518,6 @@ footer{
     opacity:1;
     transform:translateY(0) scale(1);
 }
-
-/* ===========================
-   Card Animation Delay
-=========================== */
 
 .card:nth-child(1){transition-delay:.10s;}
 .card:nth-child(2){transition-delay:.25s;}
