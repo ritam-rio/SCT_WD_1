@@ -130,7 +130,7 @@ document.querySelectorAll(".btn").forEach(button=>{
 
 const form=document.getElementById("contactForm");
 const successMessage=document.getElementById("successMessage");
-
+if (form) {
 form.addEventListener("submit",(e)=>{
 
     e.preventDefault();
@@ -165,6 +165,7 @@ form.addEventListener("submit",(e)=>{
     },4000);
 
 });
+}
 
 const courseCards = document.querySelectorAll(".card");
 const subjectInput = document.getElementById("subject");
@@ -184,8 +185,6 @@ courseCards.forEach(card => {
             behavior: "smooth"
 
         });
-
-        subjectInput.focus();
 
     });
 
