@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 *{
     margin:0;
     padding:0;
@@ -15,6 +14,11 @@ body{
     background-image:
         radial-gradient(circle at top left,#1e3a8a22 0%,transparent 35%),
         radial-gradient(circle at bottom right,#06b6d422 0%,transparent 35%);
+}
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
 }
 
 nav{
@@ -50,7 +54,6 @@ nav.scrolled{
     cursor:pointer;
     user-select:none;
 }
-
 .nav-links{
     display:flex;
     list-style:none;
@@ -72,7 +75,6 @@ nav.scrolled{
 .nav-links a:hover{
     color:#38bdf8;
 }
-
 .nav-links a::after{
     content:"";
     position:absolute;
@@ -92,7 +94,6 @@ nav.scrolled{
 .nav-links a.active{
     color:#38bdf8;
 }
-
 section{
     min-height:100vh;
     display:flex;
@@ -114,7 +115,6 @@ section p{
     color:#cbd5e1;
     line-height:1.8;
 }
-
 .home-content{
     max-width:900px;
 }
@@ -154,7 +154,7 @@ section p{
     width:100%;
     max-width:1200px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));
     gap:30px;
     margin-top:50px;
 }
@@ -232,7 +232,6 @@ section p{
 .card:hover p{
     color:#ffffff;
 }
-
 #contact{
     background:#08111f;
     padding:120px 8%;
@@ -241,13 +240,12 @@ section p{
 .contact-container{
     width:100%;
     max-width:1200px;
+    margin:60px auto 0;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:60px;
-    margin-top:60px;
     align-items:center;
 }
-
 .contact-info{
     text-align:left;
 }
@@ -297,8 +295,6 @@ section p{
 .info-box p{
     color:#d1d5db;
 }
-
-
 .contact-form{
     display:flex;
     flex-direction:column;
@@ -342,7 +338,6 @@ section p{
 .contact-form textarea:hover{
     border-color:#38bdf8;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus{
     border-color:#38bdf8;
@@ -354,7 +349,6 @@ section p{
     border:none;
     cursor:pointer;
 }
-
 #successMessage{
     margin-top:20px;
     text-align:center;
@@ -368,7 +362,6 @@ section p{
 #successMessage.show{
     opacity:1;
 }
-
 .tag{
     display:inline-block;
     padding:10px 20px;
@@ -387,7 +380,6 @@ section p{
 .home-content h1 span{
     color:#38bdf8;
 }
-
 footer{
     padding:30px;
     text-align:center;
@@ -472,7 +464,18 @@ footer{
         padding:14px 32px;
     }
 }
+.contact-form{
+    width:100%;
+    padding:25px;
+}
 
+.contact-info{
+    width:100%;
+}
+
+.info-box{
+    width:100%;
+}
 .hidden{
     opacity:0;
     transform:translateY(80px);
